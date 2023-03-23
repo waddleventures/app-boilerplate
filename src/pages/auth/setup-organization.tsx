@@ -63,7 +63,7 @@ export default function SetupOrganizationPage() {
       <div className="mx-auto flex flex-col max-w-3xl px-8 py-6 bg-white h-screen shadow-sm border-l border-r border-neutral-200">
         <PageLoadingIndicator loading={createOrganizationMutation.isLoading}>
           <form onSubmit={handleSubmit(onSaveAndCreate)}>
-            <Logo />
+            <Logo.Regular />
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900">
               Welcome to &lt;Product Name&gt;
             </h2>
