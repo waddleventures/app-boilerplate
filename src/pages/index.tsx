@@ -1,6 +1,9 @@
-import { type NextApplicationPage } from "../types/nextApplicationPage.type";
+// UTILS
+import { useBreadcrumbs } from "../components/Breadcrumbs";
 
-const Home: NextApplicationPage = () => {
+const HomePage = () => {
+  // BREADCRUMBS
+  useBreadcrumbs([])
 
   return (
     <> 
@@ -9,7 +12,7 @@ const Home: NextApplicationPage = () => {
   );
 };
 
-Home.requireAuth = true;
+HomePage.requireAuth = true;
 
-export default Home;
+export default HomePage;
 

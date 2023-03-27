@@ -14,9 +14,9 @@ export default function Layout({ children }: { children: JSX.Element }): JSX.Ele
         setBreadcrumbs,
       }}
     >
-      <div className="w-screen h-screen flex bg-neutral-50">
+      <div className="w-screen h-screen flex bg-white">
         <LayoutSidebar />
-        <main className="py-5 px-8 flex-grow overflow-x-hidden overflow-y-scroll">
+        <main className="py-5 px-8 flex-grow overflow-x-hidden overflow-y-scroll border-l border-l-gray-100">
           <Breadcrumbs />
           {children}
         </main>

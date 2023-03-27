@@ -44,7 +44,7 @@ export default function Select({ value, values, allowCreate, onChange, placehold
     <Combobox as="div" value={value} onChange={onHandleChange}>
       <div className="relative">
         <Combobox.Input
-          className="w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-emerald-700 focus:outline-none focus:ring-1 focus:ring-emerald-700 sm:text-sm"
+          className="w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 shadow-sm focus:border-primary-hover focus:outline-none focus:ring-1 focus:ring-primary-hover sm:text-sm"
           onChange={(event) => setQuery(event.target.value)}
           displayValue={(value: SelectValue) => value?.label}
           placeholder={placeholder}
@@ -68,7 +68,7 @@ export default function Select({ value, values, allowCreate, onChange, placehold
               className={({ active }) =>
                 classNames(
                   'relative cursor-pointer select-none py-2 pl-3 pr-9',
-                  active ? 'bg-emerald-700 text-white' : 'text-gray-900'
+                  active ? 'bg-primary-hover text-white' : 'text-gray-900'
                 )
               }
             >
@@ -80,7 +80,7 @@ export default function Select({ value, values, allowCreate, onChange, placehold
                     <span
                       className={classNames(
                         'absolute inset-y-0 right-0 flex items-center pr-4',
-                        active ? 'text-white' : 'text-emerald-700'
+                        active ? 'text-white' : 'text-primary-hover'
                       )}
                     >
                       <i className="ri-check-line h-5 w-5" aria-hidden="true" />

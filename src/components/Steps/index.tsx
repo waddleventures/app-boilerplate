@@ -34,7 +34,7 @@ const Step  = ({ name, description, children, onClick, isFirst = false, isLast =
       <div
         className={classNames(
           "absolute top-6 left-6 -ml-px mt-0.5 h-full w-0.5",
-          status === 'completed' ? "bg-emerald-600" : "bg-neutral-300"
+          status === 'completed' ? "bg-primary" : "bg-neutral-300"
         )}
         aria-hidden="true"
       />
@@ -45,7 +45,7 @@ const Step  = ({ name, description, children, onClick, isFirst = false, isLast =
           <span
             className={classNames(
               "relative z-10 flex h-4 w-4 items-center justify-center rounded-full",
-              status === 'completed' ? 'bg-emerald-600 group-hover:bg-emerald-800' : '',
+              status === 'completed' ? 'bg-primary group-hover:bg-emerald-800' : '',
               status === 'current' ? 'bg-emerald-200' : '',
               status === 'upcoming' ? 'border-2 border-neutral-300 bg-white group-hover:border-neutral-400' : '',
             )}
@@ -56,7 +56,7 @@ const Step  = ({ name, description, children, onClick, isFirst = false, isLast =
                 <span
                   className={classNames(
                     "h-2.5 w-2.5 rounded-full",
-                    status === 'current' ? 'bg-emerald-600' : 'bg-transparent group-hover:bg-neutral-300',
+                    status === 'current' ? 'bg-primary' : 'bg-transparent group-hover:bg-neutral-300',
                   )}
                 />
             )}
@@ -66,7 +66,7 @@ const Step  = ({ name, description, children, onClick, isFirst = false, isLast =
           <span
             className={classNames(
               "text-sm font-medium",
-              status === 'current' ? 'text-emerald-600' : '',
+              status === 'current' ? 'text-primary' : '',
               status === 'upcoming' ? 'text-neutral-500' : '',
             )}
           >

@@ -43,8 +43,8 @@ const CIconTheme = {
     inactive: 'text-neutral-500',
   },
   inverted: {
-    base: 'group-hover:text-emerald-700',
-    active: 'text-emerald-700',
+    base: 'group-hover:text-primary-hover',
+    active: 'text-primary-hover',
     inactive: 'text-neutral-500',
   },
 }
@@ -56,8 +56,8 @@ const CTextTheme = {
     inactive: 'text-neutral-700',
   },
   inverted: {
-    base: 'group-hover:text-emerald-900',
-    active: 'text-emerald-900',
+    base: 'group-hover:text-primary-darkest',
+    active: 'text-primary-darkest',
     inactive: 'text-neutral-700',
   },
 }

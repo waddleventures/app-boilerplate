@@ -1,12 +1,6 @@
 import classNames from "../../utils/classNames";
 
 // TYPES
-type AvatarWithFirstNameLastNameProps = {
-  firstName: string;
-  lastName: string;
-  size: 'sm' | 'md' | 'lg';
-}
-
 type AvatarWithNameProps = {
   name: string;
   size: 'sm' | 'md' | 'lg';
@@ -15,10 +9,6 @@ type AvatarWithNameProps = {
 type Props = {
   initials: JSX.Element | string;
   size: 'sm' | 'md' | 'lg';
-}
-
-const getInitialsFromFirstAndLastNames = (firstName: string, lastName: string) => {
-  return `${firstName.slice(0,1)}${lastName.slice(0,1)}`;
 }
 
 const getInitialsFromName = (name: string) => {
@@ -38,20 +28,15 @@ export function AvatarWithName({ name, size = 'md' }: AvatarWithNameProps): JSX.
   return <Avatar initials={initials} size={size} />
 }
 
-export function AvatarWithFirstAndLastName({ firstName, lastName, size = 'md' }: AvatarWithFirstNameLastNameProps): JSX.Element {
-  const initials = getInitialsFromFirstAndLastNames(firstName, lastName);
-  return <Avatar initials={initials} size={size} />
-}
-
 export function Avatar({ initials, size = 'md' }: Props): JSX.Element {
   return (
     <span 
       className={classNames(
-        "inline-flex items-center justify-center rounded-full bg-neutral-400 shadow-sm",
+        "inline-flex items-center justify-center rounded-full bg-neutral-200 shadow-sm",
         CSize[size]
       )}
     >
-      <span className="font-medium leading-none text-white">{initials}</span>
+      <span className="font-regular leading-none text-gray-800">{initials}</span>
     </span>
   )
 }

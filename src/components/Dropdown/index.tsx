@@ -63,7 +63,7 @@ export default function Dropdown({ buttonLabel, items, className, onClick }: Pro
                         )}
                         {item.label}
                         {item.isActive && (
-                          <i className={classNames("ri-check-line", "ml-auto text-lg text-emerald-700")} />
+                          <i className={classNames("ri-check-line", "ml-auto text-lg text-primary-hover")} />
                         )}
                       </div>
                     )}

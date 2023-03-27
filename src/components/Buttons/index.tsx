@@ -20,9 +20,9 @@ const CSizeClasses = {
 };
 
 const CThemeClasses = {
-  'primary': "bg-emerald-600 hover:bg-emerald-700 disabled:hover:bg-emerald-600 border border-emerald-600 hover:border-emerald-700 disabled:hover:border-emerald-600 text-white  focus:ring-2 focus:ring-emerald-500",
+  'primary': "bg-primary hover:bg-primary-hover disabled:hover:bg-primary border border-primary hover:border-primary-hover disabled:hover:border-primary text-white  focus:ring-2 focus:ring-primary",
   'secondary': "border-neutral-300 border bg-white text-gray-700 hover:bg-neutral-50 focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 disabled:hover:bg-white",
-  'ghost': "bg-white border-transparent text-emerald-700 hover:text-emerald-900 disabled:hover:text-emerald-700",
+  'ghost': "bg-white border-transparent text-primary-hover hover:text-primary-darkest disabled:hover:text-primary-hover",
   'danger': "bg-red-100 border-transparent hover:bg-red-200 focus:ring-2 focus:ring-red-500 text-red-500 hover:text-red-700 disabled:hover:bg-red-100 disabled:hover:text-red-500",
   'success': "bg-green-100 border-transparent hover:bg-green-200 focus:ring-2 focus:ring-green-500 text-green-600 hover:text-green-700 disabled:hover:bg-green-100 disabled:hover:text-green-500"
 }

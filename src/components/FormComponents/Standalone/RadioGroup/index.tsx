@@ -17,7 +17,7 @@ export default function RadioGroup({ value, name, label, onChange, options }: Pr
             <input
               name={name}
               type="radio"
-              className="h-4 w-4 cursor-pointer border-gray-300 text-emerald-700 focus:ring-emerald-700"
+              className="h-4 w-4 cursor-pointer border-gray-300 text-primary-hover focus:ring-primary-hover"
               value={opt.value}
               checked={opt.value === value}
               onChange={onChange ? (e) => onChange(e.target.value) : undefined}

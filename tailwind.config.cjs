@@ -13,6 +13,11 @@ module.exports = {
       fontFamily: {
         'sans': ['Manrope', ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        primary: '#7c3aed',
+        'primary-hover': '#5b21b6',
+        'primary-darkest': '#4c1d95',
+      }
     },
   },
   plugins: [

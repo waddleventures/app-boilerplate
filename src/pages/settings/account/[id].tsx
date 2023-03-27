@@ -71,52 +71,48 @@ export default function AccountPage() {
   return (
     <PageLoadingIndicator loading={isLoading}>
       <>
-        <PageTitle title="Account" />
-        <Panel
-          title="Profile"
-        >
-          <form onSubmit={handleSubmit(onSave)} className="space-y-4">
-            <Input
-              type="text"
-              label="Name"
-              placeholder="Name"
-              name="name"
-              register={register}
-              rules={{ required: 'Name is required' }}
-              error={errors['name']?.message}
-              disabled={!hasPermission}
+        <PageTitle title="My Account" />
+        <form onSubmit={handleSubmit(onSave)} className="space-y-4">
+          <Input
+            type="text"
+            label="Name"
+            placeholder="Name"
+            name="name"
+            register={register}
+            rules={{ required: 'Name is required' }}
+            error={errors['name']?.message}
+            disabled={!hasPermission}
+          />
+          <StandaloneInput
+            type="email"
+            label="Email"
+            placeholder="Email"
+            value={user?.email || ''}
+            disabled={true}
+          />
+          <LuxuriousRadioGroup
+            label="Role"
+            name="role"
+            register={register}
+            rules={{}}
+            control={control}
+            options={[
+              { value: Role.USER, label: 'User', description: 'Basic permissions' },
+              { value: Role.ADMIN, label: 'Admin', description: 'Elevated permissions', disabled: user?.role !== Role.ADMIN },
+            ]}
+            disabled={!hasPermission}
+          />
+          <div className="flex justify-between">
+            <Button
+              theme="primary"
+              label="Save"
+              iconClass="ri-check-line"
+              submit
+              size="md"
+              disabled={!isValid}
             />
-            <StandaloneInput
-              type="email"
-              label="Email"
-              placeholder="Email"
-              value={user?.email || ''}
-              disabled={true}
-            />
-            <LuxuriousRadioGroup
-              label="Role"
-              name="role"
-              register={register}
-              rules={{}}
-              control={control}
-              options={[
-                { value: Role.USER, label: 'User', description: 'Basic permissions' },
-                { value: Role.ADMIN, label: 'Admin', description: 'Elevated permissions', disabled: user?.role !== Role.ADMIN },
-              ]}
-              disabled={!hasPermission}
-            />
-            <div className="flex justify-between">
-              <Button
-                theme="primary"
-                label="Save"
-                iconClass="ri-check-line"
-                submit
-                size="md"
-                disabled={!isValid}
-              />
-            </div>
-          </form>
-        </Panel>
+          </div>
+        </form>
       </>
     </PageLoadingIndicator>
   )

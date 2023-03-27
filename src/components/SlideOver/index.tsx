@@ -32,13 +32,13 @@ export default function SlideOver({ open, onClose, header, description, footer, 
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
                   <form className="flex h-full flex-col divide-y divide-gray-200 bg-white shadow-xl">
                     <div className="h-0 flex-1 overflow-y-auto">
-                      <div className="bg-emerald-700 py-6 px-4 sm:px-6">
+                      <div className="bg-primary-hover py-6 px-4 sm:px-6">
                         <div className="flex items-center justify-between">
                           <Dialog.Title className="text-lg font-medium text-white">{header}</Dialog.Title>
                           <div className="ml-3 flex h-7 items-center">
                             <button
                               type="button"
-                              className="rounded-md bg-emerald-700 text-emerald-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                              className="rounded-md bg-primary-hover text-emerald-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                               onClick={onClose}
                             >
                               <span className="sr-only">Close panel</span>

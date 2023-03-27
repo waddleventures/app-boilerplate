@@ -1,3 +1,5 @@
+import classNames from "../../utils/classNames"
+
 // TYPES
 type Props = {
   header: JSX.Element | string,
@@ -6,21 +8,19 @@ type Props = {
 
 export default function AuthLayout({ header, children }: Props) {
   return (
-    <div className="flex h-screen">
-      <div className="flex flex-col justify-center py-12 flex-none px-20">
-        <div className="mx-auto w-96">
-          {header}
-          <div className="mt-8">
-            {children}
-          </div>
+    <div
+      className={classNames(
+        "h-screen w-screen flex justify-center items-center",
+      )}
+      style={{
+        background: 'linear-gradient(to right, #C4B5FD 0%, #A78BFA 30%, #7C3AED 60%, #5b21b6 100%)',
+      }}
+    >
+      <div className="bg-white w-1/3 p-14 h-2/3 rounded-lg shadow-lg">
+        {header}
+        <div className="mt-8">
+          {children}
         </div>
-      </div>
-      <div className="relative hidden w-0 flex-1 lg:block">
-        <img
-          className="absolute inset-0 h-full w-full object-cover"
-          src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80"
-          alt=""
-        />
       </div>
     </div>
   )

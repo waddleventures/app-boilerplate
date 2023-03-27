@@ -1,4 +1,5 @@
 import Link from "next/link"
+import FormattedLink from "../../components/FormattedLink"
 
 // COMPONENTS
 import Logo from "../../components/Logo"
@@ -28,9 +29,9 @@ const SignIn = () => {
       secondary={(
         <>
            Or{' '}
-          <Link href="/auth/sign-in?signUp=true" className="font-medium text-emerald-700 hover:text-emerald-900">
+          <FormattedLink href="/auth/sign-in?signUp=true">
             sign up if you don&apos;t have an account
-          </Link>
+          </FormattedLink>
         </>
       )}
     />
@@ -49,8 +50,8 @@ const HasError = () => {
 const AuthHeader = ({ title, secondary }: { title: string, secondary: string | JSX.Element }) => {
   return (
     <div>
-      <Logo.Regular />
-      <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
+      <Logo.New />
+      <h2 className="mt-12 text-3xl font-bold tracking-tight text-gray-900">
         {title}
       </h2>
       <p className="mt-2 text-sm text-gray-600">

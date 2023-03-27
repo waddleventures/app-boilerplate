@@ -27,13 +27,13 @@ export default function CoreTable({ data, columns, emptyState }: Props): JSX.Ele
       className="shadow ring-1 ring-black ring-opacity-5"
     >
       <table className="min-w-full divide-y divide-gray-300">
-        <thead className="bg-neutral-100">
+        <thead className="bg-neutral-50">
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map(header => (
                 <th
                   key={header.id}
-                  className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                  className="px-3 py-2 text-left text-sm font-semibold text-gray-900"
                 >
                   {header.isPlaceholder
                     ? null

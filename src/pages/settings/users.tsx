@@ -73,22 +73,20 @@ export default function UsersPage() {
             iconClass="ri-user-add-line"
           />
         </PageTitle>
-        <Panel>
-          <List
-            items={(data || []).map((user) => ({
-              actionType: 'href',
-              href: `/settings/account/${user.id}`,
-              key: user.id,
-              columns: [
-                <div key={`${user.id}-details`} className="flex space-x-4 items-center">
-                  <UserImageColumn user={user} />
-                  <UserDetailsColumn user={user} />
-                </div>,
-                <UserRoleColumn user={user} key={`${user.id}-role`} />
-              ],
-            }))}
-          />
-        </Panel>
+        <List
+          items={(data || []).map((user) => ({
+            actionType: 'href',
+            href: `/settings/account/${user.id}`,
+            key: user.id,
+            columns: [
+              <div key={`${user.id}-details`} className="flex space-x-4 items-center">
+                <UserImageColumn user={user} />
+                <UserDetailsColumn user={user} />
+              </div>,
+              <UserRoleColumn user={user} key={`${user.id}-role`} />
+            ],
+          }))}
+        />
         <InviteUserSlideOver open={isSlideOverOpen} onClose={() => setIsSlideOverOpen(false)} />
       </>
     </PageLoadingIndicator>

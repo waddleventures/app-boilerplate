@@ -25,9 +25,9 @@ const handleValueChange = (newValue: DateValueType) => {
 return (
   <div>
     <Datepicker
-      inputClassName="block w-full rounded-md border border-gray-300 text-sm shadow-sm transition-all focus:outline-none focus:border-emerald-700 focus:ring-emerald-700 font-normal focus:ring-[1.5px]"
+      inputClassName="block w-full rounded-md border border-gray-300 text-sm shadow-sm transition-all focus:outline-none focus:border-primary-hover focus:ring-primary-hover font-normal focus:ring-[1.5px]"
       toggleClassName="top-0"
-      primaryColor={"emerald"} 
+      primaryColor={"violet"} 
       value={selectedDateRange}
       onChange={handleValueChange}
     />

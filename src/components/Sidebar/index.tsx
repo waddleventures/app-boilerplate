@@ -23,12 +23,12 @@ export default function Sidebar({ menuItems, footer }: Props):JSX.Element {
         "bg-white p-4 pb-0"
       )}
     >
-      <div className="flex flex-shrink-0 w-full space-x-2 items-center">
-        <Logo.Regular />
+      <Logo.New />
+      <div className="mt-8">
         <OrganizationLabel />
       </div>
       {menuItems.map((item) => (
-        <div className="space-y-2 mt-8" key={item.label}>
+        <div className="space-y-2 mt-3" key={item.label}>
           <MenuLabel label={item.label} />
           {item.type === 'href'
             ? <Menu hrefItems={item.items as Omit<TMenuItemHref, 'theme'>[]} />

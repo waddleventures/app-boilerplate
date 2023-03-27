@@ -22,7 +22,7 @@ function PortalNavigationItem({ item }: { item: PortalNavigationItem }) {
       href={item.href}
       className={classNames(
         isCurrent
-          ? 'bg-emerald-900 text-white'
+          ? 'bg-primary-darkest text-white'
           : 'text-white hover:bg-emerald-800 hover:bg-opacity-75',
         'block px-3 py-2 rounded-md text-base font-medium'
       )}

@@ -36,7 +36,7 @@ export default function FormLuxuriousRadioGroup({ name, register, control, rules
               classNames(
                 idx === 0 ? 'rounded-tl-md rounded-tr-md' : '',
                 idx === options.length - 1 ? 'rounded-bl-md rounded-br-md' : '',
-                value === option.value ? 'bg-emerald-50 border-emerald-200 z-10' : 'border-gray-200',
+                value === option.value ? 'bg-violet-50 border-violet-200 z-10' : 'border-gray-200',
                 'relative border p-4 flex cursor-pointer focus:outline-none',
                 (option.disabled || disabled) ? 'cursor-not-allowed' : '',
               )
@@ -45,7 +45,7 @@ export default function FormLuxuriousRadioGroup({ name, register, control, rules
             <input
               {...register(name, rules)}
               type="radio"
-              className={classNames("h-4 w-4 border-gray-300 text-emerald-700 focus:ring-emerald-700", (disabled || option.disabled) ? 'cursor-not-allowed' : 'cursor-pointer')}
+              className={classNames("h-4 w-4 border-gray-300 text-primary-hover focus:ring-primary-hover", (disabled || option.disabled) ? 'cursor-not-allowed' : 'cursor-pointer')}
               value={option.value}
               disabled={disabled || option.disabled}
             />
@@ -53,14 +53,14 @@ export default function FormLuxuriousRadioGroup({ name, register, control, rules
               <label
                 className={classNames(
                   'block text-sm font-medium',
-                  value === option.value ? 'text-emerald-900' : 'text-gray-900',
+                  value === option.value ? 'text-primary-darkest' : 'text-gray-900',
                 )}
               >
                 {option.label}
               </label>
               {option.description && (
                 <span
-                  className={classNames(value === option.value ? 'text-emerald-700' : 'text-gray-500', 'block text-sm')}
+                  className={classNames(value === option.value ? 'text-primary-hover' : 'text-gray-500', 'block text-sm')}
                 >
                   {option.description}
                 </span>

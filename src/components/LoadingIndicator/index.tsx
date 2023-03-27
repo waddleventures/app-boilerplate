@@ -30,7 +30,7 @@ export default function LoadingIndicator({ loading, size = 'md' }: Props): JSX.E
         <div
           className={classNames(
             CSize[size],
-            "bg-emerald-700 text-white rounded-full flex items-center justify-center"
+            "bg-primary-hover text-white rounded-full flex items-center justify-center"
           )}
         >
           <i className="ri-check-line"></i>

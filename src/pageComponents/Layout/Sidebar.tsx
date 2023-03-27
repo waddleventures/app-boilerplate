@@ -51,7 +51,7 @@ export default function LayoutSidebar():JSX.Element {
               exactPathMatch: false,
             },
             {
-              href: "/plan-and-billing",
+              href: "/subscription",
               iconClass: "ri-bill-line",
               label: "Plan & Billing",
               exactPathMatch: false
@@ -70,7 +70,7 @@ export default function LayoutSidebar():JSX.Element {
           <AvatarWithName name={session?.user?.name || ''} size="md" />
           <div className="ml-2">
             <div className="text-sm text-gray-900">{session?.user?.name || ''}</div>
-            <div className="text-xs text-gray-500 hover:text-emerald-600 font-medium cursor-pointer" onClick={() => void signOut()}>Sign out</div>
+            <div className="text-xs text-gray-500 hover:text-primary-hover font-regular cursor-pointer" onClick={() => void signOut()}>Sign out</div>
           </div> 
         </>
       )}

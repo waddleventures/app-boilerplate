@@ -26,7 +26,7 @@ export default function TextArea({ label, placeholder, value, onChange, error }:
             "block w-full rounded-md focus:outline-none border text-sm shadow-sm transition-all",
             error
               ? "border-red-300 pr-10 text-red-900 placeholder-red-300 focus:border-red-500 focus:ring-red-500"
-              : "border-gray-300 shadow-sm focus:border-emerald-700 focus:ring-emerald-700",
+              : "border-gray-300 shadow-sm focus:border-primary-hover focus:ring-primary-hover",
           )}
           value={value}
           onChange={onChange ? (e) => onChange(e.target.value) : undefined}

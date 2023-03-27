@@ -41,7 +41,7 @@ export default function LuxuriousRadioGroup({ label, options, value, onChange, d
               <>
                 <span
                   className={classNames(
-                    checked ? 'bg-emerald-600 border-transparent' : 'bg-white border-gray-300',
+                    checked ? 'bg-primary border-transparent' : 'bg-white border-gray-300',
                     active ? 'ring-2 ring-offset-2 ring-emerald-500' : '',
                     'mt-0.5 h-4 w-4 shrink-0 rounded-full border flex items-center justify-center',
                     (option.disabled || disabled) ? 'cursor-not-allowed' : 'cursor-pointer',
@@ -53,14 +53,14 @@ export default function LuxuriousRadioGroup({ label, options, value, onChange, d
                 <span className="ml-3 flex flex-col">
                   <RadioGroup.Label
                     as="span"
-                    className={classNames(checked ? 'text-emerald-900' : 'text-gray-900', 'block text-sm font-medium')}
+                    className={classNames(checked ? 'text-primary-darkest' : 'text-gray-900', 'block text-sm font-medium')}
                   >
                     {option.label}
                   </RadioGroup.Label>
                   {option.description && (
                     <RadioGroup.Description
                       as="span"
-                      className={classNames(checked ? 'text-emerald-700' : 'text-gray-500', 'block text-sm')}
+                      className={classNames(checked ? 'text-primary-hover' : 'text-gray-500', 'block text-sm')}
                     >
                       {option.description}
                     </RadioGroup.Description>

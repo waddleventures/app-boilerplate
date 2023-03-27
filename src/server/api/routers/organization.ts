@@ -184,7 +184,7 @@ export const organizationRouter = createTRPCRouter({
               from: 'johan.hoernell@waddleventures.com',
               templateId: "d-fb96115eecea4309bc34ff2e70b588b9",
               vars: {
-                "linkUrl": `https://app-ambassadors.vercel.app/auth/accept-invitation?invitationToken=${token}`,
+                "linkUrl": `https://wv-boilerplate.vercel.app/auth/accept-invitation?invitationToken=${token}`,
               }
             });
           }

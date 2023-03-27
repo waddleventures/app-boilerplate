@@ -72,7 +72,7 @@ export const customerUserProfileRouter = createTRPCRouter({
       await sendEmail({
         to: input.email,
         templateId: CEmailTemplateIds.SEND_CUSTOMER_INVITATION as string,
-        vars: { "linkUrl": `https://app-ambassadors.vercel.app/auth/accept-invitation?invitationToken=${token}`, }
+        vars: { "linkUrl": `https://wv-boilerplate.vercel.app/auth/accept-invitation?invitationToken=${token}`, }
       });
 
       return customerUserProfileProto;
